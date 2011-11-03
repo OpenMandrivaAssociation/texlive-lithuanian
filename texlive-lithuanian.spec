@@ -1,3 +1,9 @@
+# revision 22722
+# category Package
+# catalog-ctan /language/lithuanian
+# catalog-date 2008-11-06 00:30:15 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-lithuanian
 Version:	20081106
 Release:	1
@@ -105,6 +111,7 @@ and - extra tools for intputenc and fontenc.
 %doc %{_texmfdistdir}/doc/latex/lithuanian/makeltmap.tex
 %doc %{_texmfdistdir}/doc/latex/lithuanian/testlt-urw.tex
 %doc %{_texmfdistdir}/doc/latex/lithuanian/testlt.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -115,3 +122,5 @@ and - extra tools for intputenc and fontenc.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

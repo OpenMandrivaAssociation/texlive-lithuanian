@@ -112,3 +112,17 @@ and - extra tools for intputenc and fontenc.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20081106-2
++ Revision: 753403
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20081106-1
++ Revision: 718871
+- texlive-lithuanian
+- texlive-lithuanian
+- texlive-lithuanian
+- texlive-lithuanian
+

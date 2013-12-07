@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-lithuanian
 Version:	20081106
-Release:	3
+Release:	4
 Summary:	Lithuanian language support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/lithuanian

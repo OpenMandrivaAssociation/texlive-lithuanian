@@ -1,5 +1,5 @@
 Name:		texlive-lithuanian
-Version:	20171212
+Version:	20180303
 Release:	1
 Summary:	Lithuanian language support
 Group:		Publishing

@@ -1,6 +1,6 @@
 Name:		texlive-lithuanian
 Version:	46039
-Release:	1
+Release:	2
 Summary:	Lithuanian language support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/lithuanian

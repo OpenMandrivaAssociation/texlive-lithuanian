@@ -3,7 +3,7 @@ Version:	66461
 Release:	1
 Summary:	Lithuanian language support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/lithuanian
+URL:		https://www.ctan.org/tex-archive/language/lithuanian
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lithuanian.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lithuanian.doc.r%{version}.tar.xz

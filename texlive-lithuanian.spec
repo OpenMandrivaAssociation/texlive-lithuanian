@@ -1,46 +1,22 @@
-Name:		texlive-lithuanian
-Version:	66461
+%global tl_name lithuanian
+%global tl_revision 66461
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
 Release:	1
 Summary:	Lithuanian language support
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/language/lithuanian
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lithuanian.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lithuanian.doc.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/lithuanian.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/lithuanian.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This language support package provides: - Lithuanian language
-hyphenation patterns; - Lithuanian support for Babel; -
-Lithuanian mapping and metrics for using the URW base-35 Type 1
-fonts; - examples for making Lithuanian fonts with fontinst;
-and - extra tools for intputenc and fontenc.
+This language support package provides: extra 8-bit encoding L7x used by
+fontenc: l7xenc.def, l7xenc.dfu, l7xenc.sty Lithuanian TeX support for
+URW family Type1 fonts: map, fd, tfm with L7x encoding extra code page
+definitions used by inputenc: cp775.def, latin7.def
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/enc/dvips/lithuanian
-%{_texmfdistdir}/fonts/map/dvips/lithuanian
-%{_texmfdistdir}/fonts/tfm/public/lithuanian
-%{_texmfdistdir}/tex/latex/lithuanian
-%doc %{_texmfdistdir}/doc/latex/lithuanian
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
